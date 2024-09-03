@@ -11,12 +11,16 @@ function CenterSection() {
   const navigate = useNavigate();
   const handleButtonClick = (name) => {
     if (name == "brands") {
-      console.log("click");
       navigate("/brands");
     } else if (name == "telegram") {
-      console.log("click");
+    } else if ("faq") {
       const tg = window.Telegram.WebApp;
-      let url = "https://t.me/StepUpPoizon";
+      let url =
+        "https://telegra.ph/Otvety-na-chasto-zadavaemye-voprosy-09-03-4";
+      tg.openTelegramLink(url);
+    } else if ("about") {
+      const tg = window.Telegram.WebApp;
+      let url = "https://telegra.ph/O-nas-09-03-4";
       tg.openTelegramLink(url);
     }
   };
@@ -32,7 +36,7 @@ function CenterSection() {
       <div className="centersection-down">
         <div className="centersection-down_left">
           <div className="faqBt">
-            <button>
+            <button onClick={() => handleButtonClick("faq")}>
               <img src={faq}></img>
             </button>
             <a>
@@ -40,7 +44,7 @@ function CenterSection() {
             </a>
           </div>
           <div className="aboutBt">
-            <button>
+            <button onClick={() => handleButtonClick("about")}>
               <img src={about}></img>
             </button>
             <a>О НАС</a>
