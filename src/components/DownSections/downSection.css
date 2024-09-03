@@ -1,0 +1,64 @@
+.sneaker-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.down-section-logo {
+  margin-top: 40px;
+  margin-bottom: 27px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #666666;
+}
+
+.sneaker-card img {
+  width: 155px;
+  height: 139px;
+  border-radius: 18px;
+  border: 1px solid #bbb;
+  margin-bottom: 10px;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+
+  flex-wrap: wrap; /* Позволяет элементам переходить на новую строку */
+  /* Распределяет карточки по ширине */
+  /* max-width: 180px; */
+}
+
+.down-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sneaker-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.sneaker-card a {
+  font-size: 13px;
+  text-align: left;
+  align-self: flex-start;
+  margin-left: 10px;
+  font-weight: bold;
+  color: #666666;
+}
+
+.sneaker-card button {
+  margin-top: 10px;
+  background-color: black;
+  border-radius: 13px;
+  width: 135px;
+  height: 30px;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+}

@@ -113,7 +113,7 @@ button {
   display: flex;
   align-items: center;
   font-size: 11px;
-  border-radius: 19px;
+  border-radius: 6px;
 }
 
 .centersection-down_right > button > img {
