@@ -1,5 +1,9 @@
 :root {
   background-color: #e8e8e8;
+  scroll-behavior: smooth;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 * {

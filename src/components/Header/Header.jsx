@@ -2,9 +2,16 @@ import React, { useState } from "react";
 import "../Header/header.css";
 import armenIcon from "../images/armenia.png";
 import tgIcon from "../images/tg.png";
+import Popup from "../PopupLanguage/Language";
 function Header() {
   const [toggleState, toggleSetState] = useState(false);
-
+  const onHandle = (movement) => {
+    if (movement == "openTg") {
+      const tg = window.Telegram.WebApp;
+      let url = "https://t.me/mxxny";
+      tg.openTelegramLink(url);
+    }
+  };
   const toggleLanguagesClick = () => {
     if (toggleState) {
       toggleSetState(false);
@@ -18,7 +25,7 @@ function Header() {
   return (
     <div className="header">
       <div className="header-left">
-        <button className="moderbt">
+        <button className="moderbt" onClick={() => onHandle("openTg")}>
           <img src={tgIcon}></img>
           <a>
             Если не нашли <br />
@@ -30,6 +37,8 @@ function Header() {
       <div className="header-right">
         <img src={armenIcon} onClick={toggleLanguagesClick}></img>
       </div>
+
+      <Popup active={toggleState} setActive={toggleSetState}></Popup>
     </div>
   );
 }

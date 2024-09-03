@@ -1,0 +1,72 @@
+.popup {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.527);
+  top: 0;
+  left: 0;
+  position: fixed;
+  backdrop-filter: blur(2px);
+
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.popup.active {
+  opacity: 1;
+  pointer-events: all;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+.popHead {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  color: white;
+  flex-direction: row;
+}
+
+.popHead a {
+  font-size: 20px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.popHead > button {
+  display: flex;
+  align-self: flex-end;
+  justify-content: flex-end;
+}
+
+.popBtns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.popBtns > button > img {
+  width: 80px;
+  height: 80px;
+}
