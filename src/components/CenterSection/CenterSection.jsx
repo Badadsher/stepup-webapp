@@ -9,11 +9,12 @@ import { useNavigate } from "react-router-dom";
 
 function CenterSection() {
   const navigate = useNavigate();
-
   const handleButtonClick = (name) => {
     if (name == "brands") {
+      console.log("click");
       navigate("/brands");
     } else if (name == "telegram") {
+      console.log("click");
       const tg = window.Telegram.WebApp;
       let url = "https://t.me/StepUpPoizon";
       tg.openTelegramLink(url);
@@ -47,11 +48,11 @@ function CenterSection() {
         </div>
 
         <div className="centersection-down_right">
-          <button onClick={handleButtonClick("brands")}>
+          <button onClick={() => handleButtonClick("brands")}>
             <img src={brends}></img>
             <a>ВСЕ БРЕНДЫ</a>
           </button>
-          <button onClick={handleButtonClick("telegram")}>
+          <button onClick={() => handleButtonClick("telegram")}>
             <img src={logostep}></img>
             <a>НАШ ТЕЛЕГРАМ</a>
           </button>

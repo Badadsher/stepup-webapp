@@ -17,6 +17,7 @@
   border-radius: 18px;
   border: 1px solid #bbb;
   margin-bottom: 10px;
+  filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.308));
 }
 
 .menu-container {
