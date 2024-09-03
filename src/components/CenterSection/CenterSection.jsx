@@ -5,8 +5,18 @@ import faq from "../images/faq.png";
 import brends from "../images/brends.png";
 import about from "../images/about.png";
 import logostep from "../images/logostepsv.svg";
-
+import { useNavigate } from "react-router-dom";
 function CenterSection() {
+  const navigate = useNavigate();
+
+  const handleButtonClick = (name) => {
+    if (name == "brands") {
+      navigate("/brands");
+    } else if (name == "telegram") {
+      let url = "https://t.me/StepUpPoizon";
+      openTelegramLink(url);
+    }
+  };
   return (
     <div className="centersection">
       <div className="centersection-search">
@@ -35,11 +45,11 @@ function CenterSection() {
         </div>
 
         <div className="centersection-down_right">
-          <button>
+          <button onClick={handleButtonClick(brands)}>
             <img src={brends}></img>
             <a>ВСЕ БРЕНДЫ</a>
           </button>
-          <button>
+          <button onClick={handleButtonClick(telegram)}>
             <img src={logostep}></img>
             <a>НАШ ТЕЛЕГРАМ</a>
           </button>
