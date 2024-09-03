@@ -13,15 +13,18 @@ function CenterSection() {
     if (name == "brands") {
       navigate("/brands");
     } else if (name == "telegram") {
+      const tg = window.Telegram.WebApp;
+      let url = "https://t.me/StepUpPoizon";
+      tg.openTelegramLink(url);
     } else if ("faq") {
       const tg = window.Telegram.WebApp;
       let url =
         "https://telegra.ph/Otvety-na-chasto-zadavaemye-voprosy-09-03-4";
-      tg.openTelegramLink(url);
+      tg.openLink(url);
     } else if ("about") {
       const tg = window.Telegram.WebApp;
       let url = "https://telegra.ph/O-nas-09-03-4";
-      tg.openTelegramLink(url);
+      tg.openLink(url);
     }
   };
   return (
