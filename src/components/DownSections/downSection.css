@@ -11,7 +11,7 @@
   color: #666666;
 }
 
-.sneaker-card img {
+.sneaker-card > div {
   width: 155px;
   height: 139px;
   border-radius: 18px;
@@ -20,6 +20,13 @@
   filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.308));
 }
 
+.sneaker-card > div > img {
+  width: 100%; /* Устанавливает ширину изображения */
+  height: 100%; /* Устанавливает высоту изображения */
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid #bbb;
+}
 .menu-container {
   display: flex;
   justify-content: center;

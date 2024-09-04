@@ -8,7 +8,11 @@ function DownSection() {
       <div className="menu-container">
         {NikeData.map((item, index) => (
           <div key={index} className="sneaker-card">
-            <img src={item.image}></img>
+            <div>
+              {" "}
+              <img src={item.image}></img>
+            </div>
+
             <a>{item.name}</a>
             <a>{item.price}</a>
             <button onClick={() => handleButtonClick(index, item)}>
