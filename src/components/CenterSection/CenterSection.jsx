@@ -6,8 +6,13 @@ import brends from "../images/brand.svg";
 import about from "../images/about.png";
 import logostep from "../images/stepup.png";
 import { useNavigate } from "react-router-dom";
-
+import { useTranslation } from "react-i18next";
+import useLocalStorage from "../../hoocks/use-localstorage";
+import i18n from "../../i18n";
 function CenterSection() {
+  const { t } = useTranslation();
+  const [language, setLanguage] = useLocalStorage("language", "arm");
+
   const navigate = useNavigate();
   const handleButtonClick = (name) => {
     if (name == "brands") {
@@ -16,12 +21,12 @@ function CenterSection() {
       const tg = window.Telegram.WebApp;
       let url = "https://t.me/StepUpPoizon";
       tg.openTelegramLink(url);
-    } else if ("faq") {
+    } else if (name == "faq") {
       const tg = window.Telegram.WebApp;
       let url =
         "https://telegra.ph/Otvety-na-chasto-zadavaemye-voprosy-09-03-4";
       tg.openLink(url);
-    } else if ("about") {
+    } else if (name == "about") {
       const tg = window.Telegram.WebApp;
       let url = "https://telegra.ph/O-nas-09-03-4";
       tg.openLink(url);
@@ -30,7 +35,7 @@ function CenterSection() {
   return (
     <div className="centersection">
       <div className="centersection-search">
-        <input placeholder="ПОИСК"></input>
+        <input placeholder={t("find")}></input>
         <button className="searchBt">
           <img src={loop}></img>
         </button>
@@ -42,15 +47,13 @@ function CenterSection() {
             <button onClick={() => handleButtonClick("faq")}>
               <img src={faq}></img>
             </button>
-            <a>
-              ЧАСТЫЕ <br /> ВОПРОСЫ
-            </a>
+            <a>{t("questions")}</a>
           </div>
           <div className="aboutBt">
             <button onClick={() => handleButtonClick("about")}>
               <img src={about}></img>
             </button>
-            <a>О НАС</a>
+            <a> {t("about")}</a>
           </div>
         </div>
 
@@ -59,19 +62,14 @@ function CenterSection() {
             <button onClick={() => handleButtonClick("brands")}>
               <img src={brends}></img>
             </button>
-            <a>
-              ВСЕ <br /> БРЕНДЫ
-            </a>
+            <a>{t("allbrend")}</a>
           </div>
 
           <div className="centersection-down_right-teleg">
             <button onClick={() => handleButtonClick("telegram")}>
               <img src={logostep}></img>
             </button>
-            <a>
-              НАШ <br />
-              ТЕЛЕГРАМ
-            </a>
+            <a>{t("tg")}</a>
           </div>
         </div>
       </div>

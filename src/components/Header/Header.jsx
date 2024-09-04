@@ -3,7 +3,13 @@ import "../Header/header.css";
 import armenIcon from "../images/armenia.png";
 import tgIcon from "../images/tg.png";
 import Popup from "../PopupLanguage/Language";
+import { useTranslation } from "react-i18next";
+import useLocalStorage from "../../hoocks/use-localstorage";
+import i18n from "../../i18n";
 function Header() {
+  const { t } = useTranslation();
+  const [language, setLanguage] = useLocalStorage("language", "arm");
+
   const [toggleState, toggleSetState] = useState(false);
   const onHandle = (movement) => {
     if (movement == "openTg") {
@@ -28,8 +34,9 @@ function Header() {
         <button className="moderbt" onClick={() => onHandle("openTg")}>
           <img src={tgIcon}></img>
           <a>
-            Если не нашли <br />
-            нужный товар
+            {/* Если не нашли <br />
+            нужный товар */}
+            {t("ifnotfound")}
           </a>
         </button>
       </div>

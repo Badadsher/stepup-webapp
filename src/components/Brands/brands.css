@@ -1,0 +1,41 @@
+.brands-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.brands-table > a {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+.brands-table_buttons-row_BT {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.brands-table_buttons-row_BT > button {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  border: none;
+  border-radius: 20%;
+}
+
+.brands-table_buttons-row_BT > button > img {
+  filter: invert(1);
+  width: 60px;
+  height: 35px;
+}
+
+.brands-table_buttons-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
