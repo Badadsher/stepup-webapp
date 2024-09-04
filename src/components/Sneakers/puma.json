@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "PUMA -180 Cordura",
+    "price": 679,
+    "link": "https://dw4.co/t/A/1qRRVqtYy",
+    "image": "https://cdn.poizon.com/pro-img/cut-img/20231009/0809497851dc497fa4f0287bd31f5ed2.jpg?x-oss-process=image/format,webp"
+  },
+  {
+    "id": 2,
+    "name": "PUMA Suede XL",
+    "price": 468,
+    "link": "https://dw4.co/t/A/1qRRspGKD",
+    "image": "https://cdn.poizon.com/pro-img/cut-img/20240413/8b4af5994156473aad32150547e2980c.jpg?x-oss-process=image/format,webp"
+  },
+  {
+    "id": 3,
+    "name": "PUMA Vlado Stenzel Pl",
+    "price": 369,
+    "link": "https://dw4.co/t/A/1qRRBxzTh",
+    "image": "https://cdn.poizon.com/pro-img/cut-img/20240413/4149aea17a274d899369464037bd00ae.jpeg?x-oss-process=image/format,webp"
+  }
+]

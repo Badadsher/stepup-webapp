@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Asics Gel-Kahana 8",
+    "price": 479,
+    "link": "https://dw4.co/t/A/1qRRZLeSE",
+    "image": "https://cdn.poizon.com/pro-img/cut-img/20240717/fb8c69b29a194548b9ab890eb02ff248.jpg?x-oss-process=image/format,webp"
+  },
+  {
+    "id": 2,
+    "name": "Asics Gel-Flux 4",
+    "price": 409,
+    "link": "https://dw4.co/t/A/1qRSwUCO7",
+    "image": "https://cdn.poizon.com/pro-img/cut-img/20220304/d2f16389631d496c840ab149d949b4fb.jpg?x-oss-process=image/format,webp"
+  },
+  {
+    "id": 3,
+    "name": "Asics GEL-NYC",
+    "price": 759,
+    "link": "https://dw4.co/t/A/1qRRFKaSu",
+    "image": "https://cdn.poizon.com/pro-img/cut-img/20230410/a59a92697e414ab5acc61f7bc11aabf2.jpg?x-oss-process=image/format,webp"
+  }
+]

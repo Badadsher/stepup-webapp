@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Adidas originals CAMPUS 00s",
+    "price": 478,
+    "link": "https://dw4.co/t/A/1qRRCAhJi",
+    "image": "https://cdn.poizon.com/pro-img/cut-img/20240718/f8a1c28ac5f14f6b921df1bb27f6c77a.png?x-oss-process=image/format,webp"
+  },
+  {
+    "id": 2,
+    "name": "Adidas originals SAMBA OG",
+    "price": 544,
+    "link": "https://dw4.co/t/A/1qRQnW18p",
+    "image": "https://cdn.poizon.com/pro-img/cut-img/20230721/df3170de0e69448fb764a0f010e1cee8.jpg?x-oss-process=image/format,webp"
+  },
+  {
+    "id": 3,
+    "name": "Adidas Ozweego",
+    "price": 272,
+    "link": "https://dw4.co/t/A/1qRRtONWs",
+    "image": "https://cdn.poizon.com/pro-img/cut-img/20240328/9e3e51761a4e4ac09a7906c655297c80.jpg?x-oss-process=image/format,webp"
+  }
+]

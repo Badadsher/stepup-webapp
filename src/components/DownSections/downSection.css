@@ -12,12 +12,16 @@
 }
 
 .sneaker-card > div {
+  display: flex;
+  flex-direction: column;
   width: 155px;
-  height: 139px;
+  max-height: 235px;
   border-radius: 18px;
   border: 1px solid #bbb;
   margin-bottom: 10px;
   filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.308));
+  align-items: center;
+  background-color: white;
 }
 
 .sneaker-card > div > img {
@@ -25,7 +29,7 @@
   height: 100%; /* Устанавливает высоту изображения */
   object-fit: cover;
   border-radius: 18px;
-  border: 1px solid #bbb;
+  /* border: 1px solid #bbb; */
 }
 .menu-container {
   display: flex;
@@ -60,7 +64,7 @@
   color: #666666;
 }
 
-.sneaker-card button {
+.sneaker-card > div > button {
   margin-top: 10px;
   background-color: black;
   border-radius: 13px;
@@ -69,4 +73,5 @@
   color: white;
   font-size: 11px;
   font-weight: bold;
+  margin-bottom: 8px;
 }
