@@ -8,7 +8,7 @@ function Header() {
   const onHandle = (movement) => {
     if (movement == "openTg") {
       const tg = window.Telegram.WebApp;
-      let url = "https://t.me/mxxny";
+      let url = "https://t.me/StepUp_Poizon";
       tg.openTelegramLink(url);
     }
   };
