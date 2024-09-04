@@ -76,6 +76,46 @@ button {
   background: linear-gradient(180deg, #3aaf2a, #a8bc50);
 }
 
+.centersection-down_right-brands > button {
+  width: 59px;
+  height: 59px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: #000000;
+}
+.centersection-down_right-brands > button > img {
+  width: auto;
+  height: auto;
+}
+.centersection-down_right-brands {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.centersection-down_right-teleg > button {
+  width: 59px;
+  height: 59px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: #000000;
+}
+.centersection-down_right-teleg > button > img {
+  /* width: auto;
+  height: auto; */
+}
+.centersection-down_right-teleg {
+  /* margin-top: 12px; */
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 13px;
+}
+
 .aboutBt > button > img {
   width: 42px;
   height: 42px;
@@ -95,17 +135,20 @@ button {
 }
 
 .centersection-down_left {
-  margin: 23px;
+  margin-left: 45px;
+  margin-top: 30px;
+  color: #666666;
 }
 
 .centersection-down_right {
-  display: flex;
-  flex-direction: column;
-  margin-right: 45px;
-  gap: 14px;
+  /* display: flex;
+  flex-direction: column; */
+  margin-right: 40px;
+  margin-top: 30px;
+  color: #666666;
 }
 
-.centersection-down_right > button {
+/* .centersection-down_right > button {
   width: 137px;
   height: 39px;
   background-color: #d9d9d9;
@@ -114,7 +157,7 @@ button {
   align-items: center;
   font-size: 11px;
   border-radius: 6px;
-}
+} */
 
 .centersection-down_right > button > img {
   margin-left: 14px;

@@ -2,9 +2,9 @@ import React from "react";
 import "../CenterSection/centersection.css";
 import loop from "../images/loop.png";
 import faq from "../images/faq.png";
-import brends from "../images/brends.png";
+import brends from "../images/brand.svg";
 import about from "../images/about.png";
-import logostep from "../images/logostepsv.svg";
+import logostep from "../images/stepup.png";
 import { useNavigate } from "react-router-dom";
 
 function CenterSection() {
@@ -55,14 +55,24 @@ function CenterSection() {
         </div>
 
         <div className="centersection-down_right">
-          <button onClick={() => handleButtonClick("brands")}>
-            <img src={brends}></img>
-            <a>ВСЕ БРЕНДЫ</a>
-          </button>
-          <button onClick={() => handleButtonClick("telegram")}>
-            <img src={logostep}></img>
-            <a>НАШ ТЕЛЕГРАМ</a>
-          </button>
+          <div className="centersection-down_right-brands">
+            <button onClick={() => handleButtonClick("brands")}>
+              <img src={brends}></img>
+            </button>
+            <a>
+              ВСЕ <br /> БРЕНДЫ
+            </a>
+          </div>
+
+          <div className="centersection-down_right-teleg">
+            <button onClick={() => handleButtonClick("telegram")}>
+              <img src={logostep}></img>
+            </button>
+            <a>
+              НАШ <br />
+              ТЕЛЕГРАМ
+            </a>
+          </div>
         </div>
       </div>
     </div>
