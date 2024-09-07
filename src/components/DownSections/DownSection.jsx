@@ -29,9 +29,6 @@ function DownSection() {
     }
   };
   const tg = window.Telegram.WebApp.initDataUnsafe.user;
-  useEffect(() => {
-    // const tg = window.Telegram.WebApp;
-  }, []);
 
   const handleButtonClick = (data) => {
     // Отправка данных на сервер

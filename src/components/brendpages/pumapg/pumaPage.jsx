@@ -71,7 +71,7 @@ function pumaPage() {
                   ))}
                 </a>
                 <a className="price">{priceMaker(item.price)}֏</a>
-                <button onClick={() => handleButtonClick(index, item)}>
+                <button onClick={() => handleButtonClick(item.link)}>
                   {t("buying")}
                 </button>
               </div>

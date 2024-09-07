@@ -41,6 +41,37 @@ function nikePage() {
   const filteredNike = nike.filter((item) =>
     item.name.toLowerCase().includes(searchTerm)
   );
+  const tg = window.Telegram.WebApp.initDataUnsafe.user;
+
+  const handleButtonClick = (data) => {
+    // Отправка данных на сервер
+    fetch("http://localhost:8080/stepup/checker.php", {
+      mode: "no-cors",
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        input1: data,
+        input2: tg.username,
+      }),
+    })
+      .then((response) => response.text()) // Используем text() вместо json()
+      .then((data) => {
+        try {
+          // Попытаемся разобрать данные как JSON
+          const jsonData = JSON.parse(data);
+          console.log("Ответ от сервера:", jsonData);
+        } catch (error) {
+          // Если разбор JSON не удался, выведем данные как текст
+          console.error("Ошибка при разборе JSON:", error);
+          console.log("Текст ответа:", data);
+        }
+      })
+      .catch((error) => {
+        console.error("Ошибка при отправке данных:", error);
+      });
+  };
   return (
     <div>
       <div className="centersection-search">
@@ -70,7 +101,7 @@ function nikePage() {
                   ))}
                 </a>
                 <a className="price">{priceMaker(item.price)}֏</a>
-                <button onClick={() => handleButtonClick(index, item)}>
+                <button onClick={() => handleButtonClick(item.link)}>
                   {t("buying")}
                 </button>
               </div>
