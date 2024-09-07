@@ -12,7 +12,17 @@ function Header() {
   const { t } = useTranslation();
   const [language, setLanguage] = useLocalStorage("language", "arm");
 
-  let [langStateIcon, setLangIcon] = useState(armenIcon);
+  function whichLang() {
+    if (language === "arm") {
+      return armenIcon;
+    } else if (language === "ru") {
+      return ruIcon;
+    } else {
+      return enIcon;
+    }
+  }
+
+  let [langStateIcon, setLangIcon] = useState(whichLang());
 
   const [toggleState, toggleSetState] = useState(false);
   const onHandle = (movement) => {

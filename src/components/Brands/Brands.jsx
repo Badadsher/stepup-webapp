@@ -7,12 +7,32 @@ import nb from "../images/brends/nb.png";
 import nike from "../images/brends/nike.png";
 import puma from "../images/brends/puma.png";
 import vans from "../images/brends/vans.png";
+import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
+import useLocalStorage from "../../hoocks/use-localstorage";
+import i18n from "../../i18n";
+import close from "../images/popup/clos.png";
 import "../Brands/brands.css";
 function Brands() {
+  const { t } = useTranslation();
+  const [language, setLanguage] = useLocalStorage("language", "arm");
+  const navigate = useNavigate();
+  let teleportFunc = (page) => {
+    if (page === "main") {
+      navigate("/");
+    }
+  };
+
   return (
     <div className="brands">
       <div className="brands-table">
-        <a>ВЫБЕРИТЕ БРЕНД</a>
+        <div className="brands-table-top">
+          <a></a>
+          <a> {t("choosebrand")}</a>
+          <button onClick={() => teleportFunc("main")}>
+            <img src={close}></img>
+          </button>
+        </div>
 
         <div className="brands-table_buttons">
           <div className="brands-table_buttons-row">
