@@ -29,6 +29,11 @@ function DownSection() {
     }
   };
 
+  const handleButtonClick = (data) => {
+    const tg = window.Telegram.WebApp;
+    tg.sendData(data);
+  };
+
   return (
     <div className="down-section">
       <a className="down-section-logo">{t("popular")}</a>
@@ -47,7 +52,7 @@ function DownSection() {
                 ))}
               </a>
               <a>{priceMaker(item.price)}֏</a>
-              <button onClick={() => handleButtonClick(index, item)}>
+              <button onClick={() => handleButtonClick(item.link)}>
                 {t("buying")}
               </button>
             </div>
