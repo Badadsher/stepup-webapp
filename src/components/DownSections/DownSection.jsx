@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import MainPage from "../Sneakers/mainpage.json";
 import "../DownSections/downSection.css";
 import { useTranslation } from "react-i18next";
@@ -29,9 +29,48 @@ function DownSection() {
     }
   };
 
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    // Проверяем, доступен ли объект Telegram
+    if (window.Telegram) {
+      // Получаем данные о пользователе из URL
+      const userData = window.Telegram.WebApp.initDataUnsafe.user;
+      setUser(userData);
+    }
+  }, []);
+
   const handleButtonClick = (data) => {
     const tg = window.Telegram.WebApp;
     tg.sendData(JSON.stringify(data));
+
+    // Отправка данных на сервер
+    fetch("http://localhost:8080/pcrespect/checker.php", {
+      mode: "no-cors",
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        input1: data,
+        pokup: user,
+      }),
+    })
+      .then((response) => response.text()) // Используем text() вместо json()
+      .then((data) => {
+        try {
+          // Попытаемся разобрать данные как JSON
+          const jsonData = JSON.parse(data);
+          console.log("Ответ от сервера:", jsonData);
+        } catch (error) {
+          // Если разбор JSON не удался, выведем данные как текст
+          console.error("Ошибка при разборе JSON:", error);
+          console.log("Текст ответа:", data);
+        }
+      })
+      .catch((error) => {
+        console.error("Ошибка при отправке данных:", error);
+      });
   };
 
   return (
