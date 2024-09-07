@@ -96,6 +96,10 @@ button {
   background: #000000;
 }
 
+.centersection-search {
+  font-weight: bold;
+}
+
 .centersection-down_right-brands a {
   width: 75.3px;
 }

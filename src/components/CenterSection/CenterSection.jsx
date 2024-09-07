@@ -35,10 +35,7 @@ function CenterSection() {
   return (
     <div className="centersection">
       <div className="centersection-search">
-        <input placeholder={t("find")}></input>
-        <button className="searchBt">
-          <img src={loop}></img>
-        </button>
+        <h1>STEP UP</h1>
       </div>
 
       <div className="centersection-down">

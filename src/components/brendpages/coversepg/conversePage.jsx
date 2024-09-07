@@ -13,9 +13,6 @@ function conversePage() {
     <div>
       <div className="centersection-search">
         <input placeholder={t("find")}></input>
-        <button className="searchBt">
-          <img src={loop}></img>
-        </button>
       </div>
 
       <div className="backBtn">

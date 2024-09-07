@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import jordan from "../../Sneakers/jordan.json";
 import "../jordanpg/jordanpage.css";
 import { useTranslation } from "react-i18next";
@@ -9,13 +9,23 @@ function jordanPage() {
   const { t } = useTranslation();
   const [language, setLanguage] = useLocalStorage("language", "arm");
   const navigate = useNavigate();
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value.toLowerCase());
+  };
+
+  const [searchTerm, setSearchTerm] = useState("");
+  const filteredJordan = jordan.filter((item) =>
+    item.name.toLowerCase().includes(searchTerm)
+  );
+
   return (
     <div>
       <div className="centersection-search">
-        <input placeholder={t("find")}></input>
-        <button className="searchBt">
-          <img src={loop}></img>
-        </button>
+        <input
+          onChange={handleSearchChange}
+          placeholder={t("find")}
+          value={searchTerm}
+        ></input>
       </div>
 
       <div className="backBtn">
@@ -23,26 +33,29 @@ function jordanPage() {
       </div>
 
       <div className="menu-container">
-        {jordan.map((item, index) => (
-          <div key={index} className="sneaker-cardjord">
-            <div>
-              {" "}
-              <img src={item.image}></img>
-              <a id="namejord">
-                {item.name.split("\n").map((part, i) => (
-                  <span key={i}>
-                    {part}
-                    {i < item.name.split("\n").length - 1 && <br />}
-                  </span>
-                ))}
-              </a>
-              <a className="price">{item.price}</a>
-              <button onClick={() => handleButtonClick(index, item)}>
-                {t("buying")}
-              </button>
+        {filteredJordan.length > 0 ? (
+          filteredJordan.map((item, index) => (
+            <div key={index} className="sneaker-cardjord">
+              <div>
+                <img src={item.image} alt={item.name} />
+                <a id="namejord">
+                  {item.name.split("\n").map((part, i) => (
+                    <span key={i}>
+                      {part}
+                      {i < item.name.split("\n").length - 1 && <br />}
+                    </span>
+                  ))}
+                </a>
+                <a className="price">{item.price}</a>
+                <button onClick={() => handleButtonClick(index, item)}>
+                  {t("buying")}
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
+          ))
+        ) : (
+          <p>{t("не найдено")}</p>
+        )}
       </div>
     </div>
   );
