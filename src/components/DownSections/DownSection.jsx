@@ -17,7 +17,14 @@ function DownSection() {
             <div>
               {" "}
               <img src={item.image}></img>
-              <a>{item.name}</a>
+              <a>
+                {item.name.split("\n").map((part, i) => (
+                  <span key={i}>
+                    {part}
+                    {i < item.name.split("\n").length - 1 && <br />}
+                  </span>
+                ))}
+              </a>
               <a>{item.price}</a>
               <button onClick={() => handleButtonClick(index, item)}>
                 {t("buying")}

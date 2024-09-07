@@ -62,14 +62,34 @@ function CenterSection() {
             <button onClick={() => handleButtonClick("brands")}>
               <img src={brends}></img>
             </button>
-            <a>{t("allbrend")}</a>
+
+            <a>
+              {t("allbrend")
+                .split("\n")
+                .map((part, i) => (
+                  <span key={i}>
+                    {part}
+                    {i < t("allbrend").split("\n").length - 1 && <br />}
+                  </span>
+                ))}
+            </a>
           </div>
 
           <div className="centersection-down_right-teleg">
             <button onClick={() => handleButtonClick("telegram")}>
               <img src={logostep}></img>
             </button>
-            <a>{t("tg")}</a>
+            <a>
+              {" "}
+              {t("tg")
+                .split("\n")
+                .map((part, i) => (
+                  <span key={i}>
+                    {part}
+                    {i < t("tg").split("\n").length - 1 && <br />}
+                  </span>
+                ))}
+            </a>
           </div>
         </div>
       </div>

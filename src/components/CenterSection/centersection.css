@@ -56,8 +56,13 @@ button {
   align-items: center;
   justify-content: center;
   border-radius: 14px;
-  background: #9e19be;
-  background: linear-gradient(180deg, #9e19be, #926791);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(148, 148, 148, 1) 100%
+  );
 }
 
 .faqBt > button > img {
@@ -72,8 +77,13 @@ button {
   align-items: center;
   justify-content: center;
   border-radius: 14px;
-  background: #3aaf2a;
-  background: linear-gradient(180deg, #3aaf2a, #a8bc50);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(148, 148, 148, 1) 100%
+  );
 }
 
 .centersection-down_right-brands > button {
