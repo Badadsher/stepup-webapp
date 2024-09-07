@@ -78,7 +78,7 @@ function jordanPage() {
             </div>
           ))
         ) : (
-          <p>{t("не найдено")}</p>
+          <p>{t("notefound")}</p>
         )}
       </div>
     </div>

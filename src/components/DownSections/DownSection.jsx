@@ -31,7 +31,7 @@ function DownSection() {
 
   const handleButtonClick = (data) => {
     const tg = window.Telegram.WebApp;
-    tg.sendData(data);
+    tg.sendData(JSON.stringify(data));
   };
 
   return (

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import converse from "../../Sneakers/converse.json";
 import "../coversepg/conversepage.css";
 import { useTranslation } from "react-i18next";
@@ -33,10 +33,23 @@ function conversePage() {
   const { t } = useTranslation();
   const [language, setLanguage] = useLocalStorage("language", "arm");
   const navigate = useNavigate();
+
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value.toLowerCase());
+  };
+
+  const [searchTerm, setSearchTerm] = useState("");
+  const filteredConverse = converse.filter((item) =>
+    item.name.toLowerCase().includes(searchTerm)
+  );
   return (
     <div>
       <div className="centersection-search">
-        <input placeholder={t("find")}></input>
+        <input
+          onChange={handleSearchChange}
+          placeholder={t("find")}
+          value={searchTerm}
+        ></input>
       </div>
 
       <div className="backBtn">
@@ -44,26 +57,29 @@ function conversePage() {
       </div>
 
       <div className="menu-container">
-        {converse.map((item, index) => (
-          <div key={index} className="sneaker-cardconv">
-            <div>
-              {" "}
-              <img src={item.image}></img>
-              <a id="nameconv">
-                {item.name.split("\n").map((part, i) => (
-                  <span key={i}>
-                    {part}
-                    {i < item.name.split("\n").length - 1 && <br />}
-                  </span>
-                ))}
-              </a>
-              <a className="price">{priceMaker(item.price)}֏</a>
-              <button onClick={() => handleButtonClick(index, item)}>
-                {t("buying")}
-              </button>
+        {filteredConverse.length > 0 ? (
+          filteredConverse.map((item, index) => (
+            <div key={index} className="sneaker-cardconv">
+              <div>
+                <img src={item.image} alt={item.name} />
+                <a id="nameconv">
+                  {item.name.split("\n").map((part, i) => (
+                    <span key={i}>
+                      {part}
+                      {i < item.name.split("\n").length - 1 && <br />}
+                    </span>
+                  ))}
+                </a>
+                <a className="price">{priceMaker(item.price)}֏</a>
+                <button onClick={() => handleButtonClick(index, item)}>
+                  {t("buying")}
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
+          ))
+        ) : (
+          <p>{t("notefound")}</p>
+        )}
       </div>
     </div>
   );
