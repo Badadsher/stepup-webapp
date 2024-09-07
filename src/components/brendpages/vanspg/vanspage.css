@@ -1,0 +1,107 @@
+.sneaker-cardvans {
+  display: flex;
+  flex-direction: column;
+}
+
+.down-section-logo {
+  margin-top: 40px;
+  margin-bottom: 27px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #666666;
+}
+
+.sneaker-cardvans > div {
+  display: flex;
+  flex-direction: column;
+  width: 155px;
+  /* height: 235px; */
+  border-radius: 18px;
+  border: 1px solid #bbb;
+  margin-bottom: 10px;
+  filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.308));
+  align-items: center;
+  background-color: white;
+}
+
+.sneaker-cardvans > div > img {
+  width: 100%; /* Устанавливает ширину изображения */
+  height: 100%; /* Устанавливает высоту изображения */
+  object-fit: cover;
+  border-radius: 18px;
+  /* border: 1px solid #bbb; */
+}
+.menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+
+  flex-wrap: wrap; /* Позволяет элементам переходить на новую строку */
+  /* Распределяет карточки по ширине */
+  /* max-width: 180px; */
+}
+
+.sneaker-cardvans {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.sneaker-cardvans a {
+  font-size: 13px;
+  text-align: left;
+  align-self: flex-start;
+  margin-left: 10px;
+  font-weight: bold;
+  color: #666666;
+}
+
+#namevans {
+  height: 32px;
+}
+
+.sneaker-cardvans > div > button {
+  margin-top: 10px;
+  background-color: black;
+  border-radius: 13px;
+  width: 135px;
+  height: 30px;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.centersection-search {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.backBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.backBtn > button {
+  background: black;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  width: 150px;
+  justify-content: center;
+  height: 30px;
+  border: none;
+  border-radius: 40px;
+  outline: none;
+}
+
+.price {
+  font-size: 18px !important;
+  font-weight: bold;
+}
