@@ -30,7 +30,7 @@ function DownSection() {
   };
   const tg = window.Telegram.WebApp.initDataUnsafe.user;
   useEffect(() => {
-    const tg = window.Telegram.WebApp;
+    // const tg = window.Telegram.WebApp;
   }, []);
 
   const handleButtonClick = (data) => {
@@ -67,7 +67,6 @@ function DownSection() {
     <div className="down-section">
       <a className="down-section-logo">{t("popular")}</a>
       <div className="menu-container">
-        <div>{tg.id}</div>
         {MainPage.map((item, index) => (
           <div key={index} className="sneaker-card">
             <div>
