@@ -38,6 +38,7 @@ function DownSection() {
       const userData = window.Telegram.WebApp.initDataUnsafe.user;
       setUser(userData);
     }
+    console.log(user);
   }, []);
 
   const handleButtonClick = (data) => {
