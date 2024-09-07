@@ -32,6 +32,15 @@
   height: 35px; */
 }
 
+.brands-table_buttons-row > div:first-child > button > img {
+  width: 45px;
+  height: 30px;
+}
+.brands-table_buttons-row > div:last-child > button > img {
+  width: 45px;
+  height: 30px;
+}
+
 .brands-table_buttons-row {
   display: flex;
   align-items: center;
@@ -47,4 +56,34 @@
   text-align: center;
   justify-items: end;
   align-items: start;
+}
+
+#jordan > img {
+  width: 40px;
+  height: 40px;
+}
+
+#vans > img {
+  height: 50px;
+}
+
+#asics > img {
+  width: 60px;
+  height: 20px;
+}
+
+#puma > img {
+  width: 65px;
+  height: 50px;
+}
+
+#nbes > img {
+  width: 60px;
+}
+
+#nike > img {
+  width: 60px;
+  height: 30px;
+  margin-left: 8px;
+  margin-top: 8px;
 }

@@ -43,7 +43,7 @@ function Brands() {
               <a>ADIDAS</a>
             </div>
             <div className="brands-table_buttons-row_BT">
-              <button>
+              <button id="asics">
                 <img src={asics}></img>
               </button>
               <a>ASICS</a>
@@ -57,7 +57,7 @@ function Brands() {
               <a>CONVERSE</a>
             </div>
             <div className="brands-table_buttons-row_BT">
-              <button>
+              <button id="jordan">
                 <img src={jordan}></img>
               </button>
               <a>JORDAN</a>
@@ -65,13 +65,13 @@ function Brands() {
           </div>
           <div className="brands-table_buttons-row">
             <div className="brands-table_buttons-row_BT">
-              <button>
+              <button id="nbes">
                 <img src={nb}></img>
               </button>
               <a>NEW BALANCE</a>
             </div>
             <div className="brands-table_buttons-row_BT">
-              <button>
+              <button id="nike">
                 <img src={nike}></img>
               </button>
               <a>NIKE</a>
@@ -79,14 +79,14 @@ function Brands() {
           </div>
           <div className="brands-table_buttons-row">
             <div className="brands-table_buttons-row_BT">
-              <button>
+              <button id="puma">
                 <img src={puma}></img>
               </button>
               <a>PUMA</a>
             </div>
 
             <div className="brands-table_buttons-row_BT">
-              <button>
+              <button id="vans">
                 <img src={vans}></img>
               </button>
               <a>VANS</a>
