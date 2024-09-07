@@ -40,6 +40,8 @@ function nbPage() {
   const tg = window.Telegram.WebApp.initDataUnsafe.user;
 
   const handleButtonClick = (data) => {
+    let message = "Ваш заказ принят!";
+    window.Telegram.WebApp.showAlert(message);
     // Отправка данных на сервер
     fetch("http://localhost:8080/stepup/checker.php", {
       mode: "no-cors",
@@ -50,7 +52,7 @@ function nbPage() {
       body: JSON.stringify({
         input1: data,
         input2: tg.username,
-        customer: tg.id,
+        input3: tg.id,
       }),
     })
       .then((response) => response.text()) // Используем text() вместо json()

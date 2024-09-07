@@ -46,6 +46,8 @@ function vansPage() {
   const tg = window.Telegram.WebApp.initDataUnsafe.user;
 
   const handleButtonClick = (data) => {
+    let message = "Ваш заказ принят!";
+    window.Telegram.WebApp.showAlert(message);
     // Отправка данных на сервер
     fetch("http://localhost:8080/stepup/checker.php", {
       mode: "no-cors",
@@ -70,8 +72,6 @@ function vansPage() {
           console.error("Ошибка при разборе JSON:", error);
           console.log("Текст ответа:", data);
         }
-
-        window.Telegram.WebApp.close();
       })
       .catch((error) => {
         console.error("Ошибка при отправке данных:", error);
