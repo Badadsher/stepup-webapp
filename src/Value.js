@@ -1,4 +1,6 @@
-export let dramForYuan = 56;
-export let dramForRub = 4.2;
-export let yuanForEur = 0.13;
-export let eurForRub = 100;
+let dramForYuan = 56;
+let dramForRub = 4.2;
+let yuanForEur = 0.13;
+let eurForRub = 100;
+
+export { dramForYuan, dramForRub, yuanForEur, eurForRub };

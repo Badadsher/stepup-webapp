@@ -12,6 +12,8 @@ function Header() {
   const { t } = useTranslation();
 
   function whichLang() {
+    const [language, setLanguage] = useLocalStorage("language", "arm");
+
     if (language === "arm") {
       return armenIcon;
     } else if (language === "ru") {

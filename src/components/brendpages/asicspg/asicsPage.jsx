@@ -5,11 +5,34 @@ import { useTranslation } from "react-i18next";
 import useLocalStorage from "../../../hoocks/use-localstorage";
 import loop from "../../images/loop.png";
 import { useNavigate } from "react-router-dom";
+import {
+  dramForYuan,
+  dramForRub,
+  yuanForEur,
+  eurForRub,
+} from "../../../Value.js";
 function asicspage() {
   const { t } = useTranslation();
   const [language, setLanguage] = useLocalStorage("language", "arm");
   const navigate = useNavigate();
-
+  const priceMaker = (price) => {
+    if (price < 300) {
+      return Math.floor(price * dramForYuan + 23000 + (price * 3) / 100);
+    } else if (price >= 300 && price < 500) {
+      return Math.floor(price * dramForYuan + 28000 + (price * 3) / 100);
+    } else if (price >= 500 && price < 850) {
+      return Math.floor(price * dramForYuan + 33000 + (price * 3) / 100);
+    } else if (price >= 850 && price < 1500) {
+      return Math.floor(price * dramForYuan + 38000 + (price * 3) / 100);
+    } else if (price >= 1500) {
+      let poshlRazn = price - 1500;
+      let poshl = poshlRazn * 0.15 * eurForRub + 500;
+      let finalposhl = poshl + (poshlRazn * 0.15 * eurForRub + 500) * 0.05;
+      return Math.floor(
+        price * dramForYuan + 38000 + (price * 3) / 100 + finalposhl
+      );
+    }
+  };
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value.toLowerCase());
   };
@@ -46,7 +69,7 @@ function asicspage() {
                     </span>
                   ))}
                 </a>
-                <a className="price">{item.price}</a>
+                <a className="price">{priceMaker(item.price)}֏</a>
                 <button onClick={() => handleButtonClick(index, item)}>
                   {t("buying")}
                 </button>
