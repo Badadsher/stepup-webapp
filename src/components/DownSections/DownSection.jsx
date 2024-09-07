@@ -31,7 +31,7 @@ function DownSection() {
   const tg = window.Telegram.WebApp;
   useEffect(() => {
     const tg = window.Telegram.WebApp;
-    console.log(tg.user);
+
   }, []);
 
   const handleButtonClick = (data) => {
