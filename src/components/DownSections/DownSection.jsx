@@ -28,23 +28,13 @@ function DownSection() {
       );
     }
   };
-
-  const [user, setUser] = useState(null);
-
+  const tg = window.Telegram.WebApp;
   useEffect(() => {
-    // Проверяем, доступен ли объект Telegram
-    if (window.Telegram) {
-      // Получаем данные о пользователе из URL
-      const userData = window.Telegram.WebApp.initDataUnsafe.user;
-      setUser(userData);
-    }
-    console.log(user);
+    const tg = window.Telegram.WebApp;
+    console.log(tg.user);
   }, []);
 
   const handleButtonClick = (data) => {
-    const tg = window.Telegram.WebApp;
-    tg.sendData(JSON.stringify(data, user));
-
     // Отправка данных на сервер
     fetch("http://localhost:8080/pcrespect/checker.php", {
       mode: "no-cors",
@@ -54,7 +44,7 @@ function DownSection() {
       },
       body: JSON.stringify({
         input1: data,
-        input2: user,
+        input2: tg.user,
       }),
     })
       .then((response) => response.text()) // Используем text() вместо json()
@@ -78,6 +68,7 @@ function DownSection() {
     <div className="down-section">
       <a className="down-section-logo">{t("popular")}</a>
       <div className="menu-container">
+        <div>{tg.user}</div>
         {MainPage.map((item, index) => (
           <div key={index} className="sneaker-card">
             <div>
