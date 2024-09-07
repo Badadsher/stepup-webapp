@@ -28,10 +28,9 @@ function DownSection() {
       );
     }
   };
-  const tg = window.Telegram.WebApp;
+  const tg = window.Telegram.WebApp.initDataUnsafe.user;
   useEffect(() => {
     const tg = window.Telegram.WebApp;
-
   }, []);
 
   const handleButtonClick = (data) => {
@@ -44,7 +43,7 @@ function DownSection() {
       },
       body: JSON.stringify({
         input1: data,
-        input2: tg.user,
+        input2: tg.id,
       }),
     })
       .then((response) => response.text()) // Используем text() вместо json()
@@ -68,7 +67,7 @@ function DownSection() {
     <div className="down-section">
       <a className="down-section-logo">{t("popular")}</a>
       <div className="menu-container">
-        <div>{tg.user}</div>
+        <div>{tg.id}</div>
         {MainPage.map((item, index) => (
           <div key={index} className="sneaker-card">
             <div>
