@@ -43,7 +43,7 @@ function DownSection() {
 
   const handleButtonClick = (data) => {
     const tg = window.Telegram.WebApp;
-    tg.sendData(JSON.stringify(data));
+    tg.sendData(JSON.stringify(data, user));
 
     // Отправка данных на сервер
     fetch("http://localhost:8080/pcrespect/checker.php", {
@@ -54,7 +54,7 @@ function DownSection() {
       },
       body: JSON.stringify({
         input1: data,
-        pokup: user,
+        input2: user,
       }),
     })
       .then((response) => response.text()) // Используем text() вместо json()
