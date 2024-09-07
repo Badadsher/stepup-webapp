@@ -9,12 +9,13 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import useLocalStorage from "../../hoocks/use-localstorage";
 import i18n from "../../i18n";
+import { useState } from "react";
 function CenterSection() {
   const { t } = useTranslation();
   const [language, setLanguage] = useLocalStorage("language", "arm");
 
   const navigate = useNavigate();
-  const handleButtonClick = (name) => {
+  function handleButtonClick(name) {
     if (name == "brands") {
       navigate("/brands");
     } else if (name == "telegram") {
@@ -23,15 +24,35 @@ function CenterSection() {
       tg.openTelegramLink(url);
     } else if (name == "faq") {
       const tg = window.Telegram.WebApp;
-      let url =
-        "https://telegra.ph/Otvety-na-chasto-zadavaemye-voprosy-09-03-4";
-      tg.openLink(url);
+
+      if (i18n.language === "ru") {
+        let url =
+          "https://telegra.ph/Otvety-na-chasto-zadavaemye-voprosy-09-03-4";
+        tg.openLink(url);
+      } else if (i18n.language === "arm") {
+        let url =
+          "https://telegra.ph/Հաճախակի-տրվող-հարցերի-պատասխանները-09-03";
+        tg.openLink(url);
+      } else if (i18n.language === "en") {
+        let url =
+          "https://telegra.ph/Answers-to-frequently-asked-questions-09-03";
+        tg.openLink(url);
+      }
     } else if (name == "about") {
       const tg = window.Telegram.WebApp;
-      let url = "https://telegra.ph/O-nas-09-03-4";
-      tg.openLink(url);
+
+      if (i18n.language === "ru") {
+        let url = "https://telegra.ph/O-nas-09-03-4";
+        tg.openLink(url);
+      } else if (i18n.language === "arm") {
+        let url = "https://telegra.ph/Մեր-մասին-09-03";
+        tg.openLink(url);
+      } else if (i18n.language === "en") {
+        let url = "https://telegra.ph/About-us-09-03-8";
+        tg.openLink(url);
+      }
     }
-  };
+  }
   return (
     <div className="centersection">
       <div className="centersection-search">

@@ -23,14 +23,21 @@ const Popup = ({
     if (lang === "en") {
       i18n.changeLanguage("en");
       setLanguage("en");
+      i18n.changeLanguage(lang);
+      console.log(i18n.language);
       setLangIcon(enIcon);
     } else if (lang === "ru") {
       i18n.changeLanguage("ru");
+
       setLanguage("ru");
+      i18n.changeLanguage(lang);
+      console.log(i18n.language);
       setLangIcon(ruIcon);
     } else if (lang === "arm") {
       i18n.changeLanguage("arm");
       setLanguage("arm");
+      i18n.changeLanguage(lang);
+      console.log(i18n.language);
       setLangIcon(armenIcon);
     }
   };

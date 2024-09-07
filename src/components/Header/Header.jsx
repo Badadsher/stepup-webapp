@@ -10,7 +10,6 @@ import useLocalStorage from "../../hoocks/use-localstorage";
 import i18n from "../../i18n";
 function Header() {
   const { t } = useTranslation();
-  const [language, setLanguage] = useLocalStorage("language", "arm");
 
   function whichLang() {
     if (language === "arm") {
