@@ -41,33 +41,33 @@ function DownSection() {
     };
     window.Telegram.WebApp.sendData(JSON.stringify(datatg));
     // Отправка данных на сервер
-    fetch("http://localhost:8080/stepup/checker2.php", {
-      mode: "no-cors",
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        input1: data,
-        input2: tg.username,
-        input3: tg.id,
-      }),
-    })
-      .then((response) => response.text()) // Используем text() вместо json()
-      .then((data) => {
-        try {
-          // Попытаемся разобрать данные как JSON
-          const jsonData = JSON.parse(data);
-          console.log("Ответ от сервера:", jsonData);
-        } catch (error) {
-          // Если разбор JSON не удался, выведем данные как текст
-          console.error("Ошибка при разборе JSON:", error);
-          console.log("Текст ответа:", data);
-        }
-      })
-      .catch((error) => {
-        console.error("Ошибка при отправке данных:", error);
-      });
+    // fetch("http://localhost:8080/stepup/checker2.php", {
+    //   mode: "no-cors",
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({
+    //     input1: data,
+    //     input2: tg.username,
+    //     input3: tg.id,
+    //   }),
+    // })
+    //   .then((response) => response.text()) // Используем text() вместо json()
+    //   .then((data) => {
+    //     try {
+    //       // Попытаемся разобрать данные как JSON
+    //       const jsonData = JSON.parse(data);
+    //       console.log("Ответ от сервера:", jsonData);
+    //     } catch (error) {
+    //       // Если разбор JSON не удался, выведем данные как текст
+    //       console.error("Ошибка при разборе JSON:", error);
+    //       console.log("Текст ответа:", data);
+    //     }
+    //   })
+    //   .catch((error) => {
+    //     console.error("Ошибка при отправке данных:", error);
+    //   });
   };
 
   return (
