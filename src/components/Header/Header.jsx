@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "../Header/header.css";
 import armenIcon from "../images/armenia.png";
+import ruIcon from "../images/popup/russia.png";
+import enIcon from "../images/popup/usa.png";
 import tgIcon from "../images/tg.png";
 import Popup from "../PopupLanguage/Language";
 import { useTranslation } from "react-i18next";
@@ -9,6 +11,8 @@ import i18n from "../../i18n";
 function Header() {
   const { t } = useTranslation();
   const [language, setLanguage] = useLocalStorage("language", "arm");
+
+  let [langStateIcon, setLangIcon] = useState(armenIcon);
 
   const [toggleState, toggleSetState] = useState(false);
   const onHandle = (movement) => {
@@ -21,10 +25,8 @@ function Header() {
   const toggleLanguagesClick = () => {
     if (toggleState) {
       toggleSetState(false);
-      console.log(toggleState);
     } else {
       toggleSetState(true);
-      console.log(toggleState);
     }
   };
 
@@ -42,10 +44,18 @@ function Header() {
       </div>
 
       <div className="header-right">
-        <img src={armenIcon} onClick={toggleLanguagesClick}></img>
+        <img src={langStateIcon} onClick={toggleLanguagesClick}></img>
       </div>
 
-      <Popup active={toggleState} setActive={toggleSetState}></Popup>
+      <Popup
+        ruIcon={ruIcon}
+        enIcon={enIcon}
+        armenIcon={armenIcon}
+        langIcon={langStateIcon}
+        setLangIcon={setLangIcon}
+        active={toggleState}
+        setActive={toggleSetState}
+      ></Popup>
     </div>
   );
 }

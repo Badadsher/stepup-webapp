@@ -95,6 +95,10 @@ button {
   border-radius: 14px;
   background: #000000;
 }
+
+.centersection-down_right-brands a {
+  width: 75.3px;
+}
 .centersection-down_right-brands > button > img {
   width: auto;
   height: auto;

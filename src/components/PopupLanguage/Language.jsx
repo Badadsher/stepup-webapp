@@ -7,7 +7,15 @@ import arm from "../images/armenia.png";
 import { useTranslation } from "react-i18next";
 import useLocalStorage from "../../hoocks/use-localstorage";
 import i18n from "../../i18n";
-const Popup = ({ active, setActive }) => {
+const Popup = ({
+  active,
+  setActive,
+  langIcon,
+  setLangIcon,
+  ruIcon,
+  enIcon,
+  armenIcon,
+}) => {
   const { t } = useTranslation();
   const [language, setLanguage] = useLocalStorage("language", "arm");
 
@@ -15,12 +23,15 @@ const Popup = ({ active, setActive }) => {
     if (lang === "en") {
       i18n.changeLanguage("en");
       setLanguage("en");
+      setLangIcon(enIcon);
     } else if (lang === "ru") {
       i18n.changeLanguage("ru");
       setLanguage("ru");
+      setLangIcon(ruIcon);
     } else if (lang === "arm") {
       i18n.changeLanguage("arm");
       setLanguage("arm");
+      setLangIcon(armenIcon);
     }
   };
 
