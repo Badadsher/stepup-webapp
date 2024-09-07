@@ -36,7 +36,7 @@ function DownSection() {
 
   const handleButtonClick = (data) => {
     // Отправка данных на сервер
-    fetch("http://localhost:8080/pcrespect/checker.php", {
+    fetch("http://localhost:8080/stepup/checker.php", {
       mode: "no-cors",
       method: "POST",
       headers: {
