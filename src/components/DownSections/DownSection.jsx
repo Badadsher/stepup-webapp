@@ -33,8 +33,15 @@ function DownSection() {
   const handleButtonClick = (data) => {
     let message = "Ваш заказ принят!";
     window.Telegram.WebApp.showAlert(message);
+
+    const datatg = {
+      input1: data,
+      input2: tg.username,
+      tgid: tg.id,
+    };
+    window.Telegram.WebApp.sendData(JSON.stringify(datatg));
     // Отправка данных на сервер
-    fetch("http://localhost:8080/stepup/checker.php", {
+    fetch("http://localhost:8080/stepup/checker2.php", {
       mode: "no-cors",
       method: "POST",
       headers: {
