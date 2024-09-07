@@ -43,7 +43,7 @@ function DownSection() {
       },
       body: JSON.stringify({
         input1: data,
-        input2: tg.id,
+        input2: tg.username,
       }),
     })
       .then((response) => response.text()) // Используем text() вместо json()
