@@ -20,7 +20,11 @@ function DownSection() {
       let finalposhl =
         (poshl + (poshlRazn * 0.15 * eurForRub + 500) * 0.05) / dramForRub;
       return Math.floor(
-        price * dramForYuan + 38000 + (price * 3) / 100 + finalposhl
+        price * dramForYuan +
+          13000 +
+          price * 0.45 +
+          (price * 3) / 100 +
+          finalposhl
       );
     }
   };
