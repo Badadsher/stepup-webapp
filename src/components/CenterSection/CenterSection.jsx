@@ -65,7 +65,16 @@ function CenterSection() {
             <button onClick={() => handleButtonClick("faq")}>
               <img src={faq}></img>
             </button>
-            <a>{t("questions")}</a>
+            <a>
+              {t("questions")
+                .split("\n")
+                .map((part, i) => (
+                  <span key={i}>
+                    {part}
+                    {i < t("questions").split("\n").length - 1 && <br />}
+                  </span>
+                ))}
+            </a>
           </div>
           <div className="aboutBt">
             <button onClick={() => handleButtonClick("about")}>
