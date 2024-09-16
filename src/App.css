@@ -12,3 +12,11 @@ html {
   padding: 0;
   box-sizing: border-box;
 }
+
+.menu-container img {
+  transition: 250ms all;
+}
+
+.menu-container img:hover {
+  transform: scale(1.2);
+}
