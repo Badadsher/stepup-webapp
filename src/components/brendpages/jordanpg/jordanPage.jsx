@@ -45,6 +45,14 @@ function jordanPage() {
   const tg = window.Telegram.WebApp.initDataUnsafe.user;
 
   const handleButtonClick = (data) => {
+    let sellag;
+    if (i18n.languag === "ru") {
+      sellag === "Русский";
+    } else if (i18n.languag === "eng") {
+      sellag === "Английский";
+    } else {
+      sellag === "Армянский";
+    }
     let message = "Ваш заказ принят!";
     window.Telegram.WebApp.showAlert(message);
     // Отправка данных на сервер
@@ -58,7 +66,7 @@ function jordanPage() {
         input1: data,
         input2: tg.username,
         input3: tg.id,
-        input4: i18n.language,
+        input4: sellag,
       }),
     })
       .then((response) => response.text()) // Используем text() вместо json()
