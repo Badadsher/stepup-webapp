@@ -44,7 +44,7 @@ function DownSection() {
         input1: data,
         input2: tg.username,
         input3: tg.id,
-        input4: i18n.language,
+        input4: i18n.language.toString(),
       }),
     })
       .then((response) => response.text()) // Используем text() вместо json()
