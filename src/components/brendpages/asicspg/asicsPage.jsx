@@ -46,14 +46,6 @@ function asicspage() {
   const tg = window.Telegram.WebApp.initDataUnsafe.user;
 
   const handleButtonClick = (data) => {
-    let sellag;
-    if (i18n.language === "ru") {
-      sellag === "Русский";
-    } else if (i18n.language === "eng") {
-      sellag === "Английский";
-    } else {
-      sellag === "Армянский";
-    }
     let message = "Ваш заказ принят!";
     window.Telegram.WebApp.showAlert(message);
     // Отправка данных на сервер
@@ -67,7 +59,7 @@ function asicspage() {
         input1: data,
         input2: tg.username,
         input3: tg.id,
-        input4: sellag,
+        input4: i18n.language.toString(),
       }),
     })
       .then((response) => response.text()) // Используем text() вместо json()
