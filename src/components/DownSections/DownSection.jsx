@@ -4,7 +4,6 @@ import "../DownSections/downSection.css";
 import { useTranslation } from "react-i18next";
 import useLocalStorage from "../../hoocks/use-localstorage";
 import i18n from "../../i18n";
-
 import { dramForYuan, dramForRub, yuanForEur, eurForRub } from "../../Value.js";
 function DownSection() {
   const { t } = useTranslation();
@@ -32,18 +31,10 @@ function DownSection() {
   const tg = window.Telegram.WebApp.initDataUnsafe.user;
 
   const handleButtonClick = (data) => {
-    let sellag;
-    if (i18n.language === "ru") {
-      sellag === "Русский";
-    } else if (i18n.language === "eng") {
-      sellag === "Английский";
-    } else {
-      sellag === "Армянский";
-    }
     let message = "Ваш заказ принят!";
     window.Telegram.WebApp.showAlert(message);
     // Отправка данных на сервер
-    fetch("http://45.140.179.231/stepchater/checker.php", {
+    fetch("http://localhost:8080/stepup/checker.php", {
       mode: "no-cors",
       method: "POST",
       headers: {
@@ -53,7 +44,7 @@ function DownSection() {
         input1: data,
         input2: tg.username,
         input3: tg.id,
-        input4: i18n.language.toString(),
+        input4: i18n.language,
       }),
     })
       .then((response) => response.text()) // Используем text() вместо json()
