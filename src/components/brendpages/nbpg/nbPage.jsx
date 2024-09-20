@@ -41,9 +41,9 @@ function nbPage() {
 
   const handleButtonClick = (data) => {
     let sellag;
-    if (i18n.languag === "ru") {
+    if (i18n.language === "ru") {
       sellag === "Русский";
-    } else if (i18n.languag === "eng") {
+    } else if (i18n.language === "eng") {
       sellag === "Английский";
     } else {
       sellag === "Армянский";
