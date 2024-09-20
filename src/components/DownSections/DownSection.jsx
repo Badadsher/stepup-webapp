@@ -4,6 +4,7 @@ import "../DownSections/downSection.css";
 import { useTranslation } from "react-i18next";
 import useLocalStorage from "../../hoocks/use-localstorage";
 import i18n from "../../i18n";
+
 import { dramForYuan, dramForRub, yuanForEur, eurForRub } from "../../Value.js";
 function DownSection() {
   const { t } = useTranslation();
@@ -52,7 +53,7 @@ function DownSection() {
         input1: data,
         input2: tg.username,
         input3: tg.id,
-        input4: sellag,
+        // input4: sellag,
       }),
     })
       .then((response) => response.text()) // Используем text() вместо json()
