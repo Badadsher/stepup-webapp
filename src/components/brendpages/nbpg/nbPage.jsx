@@ -43,7 +43,7 @@ function nbPage() {
     let message = "Ваш заказ принят!";
     window.Telegram.WebApp.showAlert(message);
     // Отправка данных на сервер
-    fetch("http://localhost:8080/stepup/checker.php", {
+    fetch("http://45.140.179.231/stepchater/checker.php", {
       mode: "no-cors",
       method: "POST",
       headers: {
@@ -53,6 +53,7 @@ function nbPage() {
         input1: data,
         input2: tg.username,
         input3: tg.id,
+        input4: i18n.language,
       }),
     })
       .then((response) => response.text()) // Используем text() вместо json()
