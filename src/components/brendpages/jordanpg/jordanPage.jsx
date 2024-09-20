@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import useLocalStorage from "../../../hoocks/use-localstorage";
 import loop from "../../images/loop.png";
 import { useNavigate } from "react-router-dom";
+import i18n from "../../../i18n.js";
 import {
   dramForYuan,
   dramForRub,
