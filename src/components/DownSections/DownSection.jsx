@@ -34,7 +34,7 @@ function DownSection() {
     let message = "Ваш заказ принят!";
     window.Telegram.WebApp.showAlert(message);
     // Отправка данных на сервер
-    fetch("http://45.140.179.231/stepchater/checker.php", {
+    fetch("http://45.140.179.231:8000/server", {
       // mode: "no-cors",
       method: "POST",
       headers: {
