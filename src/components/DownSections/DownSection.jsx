@@ -32,7 +32,7 @@ function DownSection() {
 
   const handleButtonClick = (data) => {
     let message = "Ваш заказ принят!";
-    window.Telegram.WebApp.showAlert(message);
+    // window.Telegram.WebApp.showAlert(message);
     // Отправка данных на сервер
     fetch("http://45.140.179.231/web-data", {
       // mode: "no-cors",
@@ -42,9 +42,9 @@ function DownSection() {
       },
       body: JSON.stringify({
         input1: data,
-        input2: tg.username,
-        input3: tg.id,
-        input4: i18n.language.toString(),
+        input2: "tg.username",
+        input3: "tg.id",
+        input4: "i18n.language.toString()",
       }),
     });
   };
