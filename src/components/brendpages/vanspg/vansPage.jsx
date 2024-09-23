@@ -50,7 +50,7 @@ function vansPage() {
     let message = "Ваш заказ принят!";
     window.Telegram.WebApp.showAlert(message);
     // Отправка данных на сервер
-    fetch("http://45.140.179.231/stepchater/checker.php", {
+    fetch("http://45.140.179.231/web-data", {
       // mode: "no-cors",
       method: "POST",
       headers: {
