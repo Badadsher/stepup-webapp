@@ -50,7 +50,7 @@ function jordanPage() {
     window.Telegram.WebApp.showAlert(message);
     // Отправка данных на сервер
     fetch("http://45.140.179.231/stepchater/checker.php", {
-      mode: "no-cors",
+      // mode: "no-cors",
       method: "POST",
       headers: {
         "Content-Type": "application/json",
