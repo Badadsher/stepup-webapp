@@ -61,22 +61,7 @@ function jordanPage() {
         input3: tg.id,
         input4: i18n.language.toString(),
       }),
-    })
-      .then((response) => response.text()) // Используем text() вместо json()
-      .then((data) => {
-        try {
-          // Попытаемся разобрать данные как JSON
-          const jsonData = JSON.parse(data);
-          console.log("Ответ от сервера:", jsonData);
-        } catch (error) {
-          // Если разбор JSON не удался, выведем данные как текст
-          console.error("Ошибка при разборе JSON:", error);
-          console.log("Текст ответа:", data);
-        }
-      })
-      .catch((error) => {
-        console.error("Ошибка при отправке данных:", error);
-      });
+    });
   };
 
   return (
