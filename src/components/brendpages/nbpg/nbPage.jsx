@@ -44,7 +44,7 @@ function nbPage() {
     let message = "Ваш заказ принят!";
     window.Telegram.WebApp.showAlert(message);
     // Отправка данных на сервер
-    fetch("http://45.140.179.231/web-data", {
+    fetch("https://step.stepupback.ru/web-data", {
       // mode: "no-cors",
       method: "POST",
       headers: {
