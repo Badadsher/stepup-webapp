@@ -49,7 +49,7 @@ function asicspage() {
     let message = "Ваш заказ принят!";
     window.Telegram.WebApp.showAlert(message);
     // Отправка данных на сервер
-    fetch("https://step.stepupback.ru/web-data", {
+    fetch("https://stepupback.ru/web-data", {
       // mode: "no-cors",
       method: "POST",
       headers: {
