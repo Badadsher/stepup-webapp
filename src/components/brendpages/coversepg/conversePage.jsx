@@ -48,8 +48,16 @@ function conversePage() {
   const tg = window.Telegram.WebApp.initDataUnsafe.user;
 
   const handleButtonClick = (data) => {
-    let message = "Ваш заказ принят!";
-    window.Telegram.WebApp.showAlert(message);
+    if (i18n.language === "ru") {
+      let message = "Ваш заказ принят!";
+      window.Telegram.WebApp.showAlert(message);
+    } else if (i18n.language === "en") {
+      let message = "Your order is accepted!";
+      window.Telegram.WebApp.showAlert(message);
+    } else {
+      let message = "Ձեր պատվերն ընդունված է";
+      window.Telegram.WebApp.showAlert(message);
+    }
     // Отправка данных на сервер
     fetch("https://stepupback.ru/web-data", {
       // mode: "no-cors",
