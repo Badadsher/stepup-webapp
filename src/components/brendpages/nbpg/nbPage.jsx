@@ -14,20 +14,21 @@ import {
 import { useNavigate } from "react-router-dom";
 function nbPage() {
   const priceMaker = (price) => {
-    if (price < 300) {
-      return Math.floor(price * dramForYuan + 23000 + (price * 3) / 100);
-    } else if (price >= 300 && price < 500) {
-      return Math.floor(price * dramForYuan + 28000 + (price * 3) / 100);
-    } else if (price >= 500 && price < 850) {
-      return Math.floor(price * dramForYuan + 33000 + (price * 3) / 100);
-    } else if (price >= 850 && price < 1500) {
-      return Math.floor(price * dramForYuan + 38000 + (price * 3) / 100);
+    if (price < 1500) {
+      let y = (price + price * 0.03) * dramForYuan;
+      let z = y + y * 0.35 + 13000;
+      return Math.floor(z);
     } else if (price >= 1500) {
       let poshlRazn = price - 1500;
       let poshl = poshlRazn * 0.15 * eurForRub + 500;
-      let finalposhl = poshl + (poshlRazn * 0.15 * eurForRub + 500) * 0.05;
+      let finalposhl =
+        (poshl + (poshlRazn * 0.15 * eurForRub + 500) * 0.05) / dramForRub;
       return Math.floor(
-        price * dramForYuan + 38000 + (price * 3) / 100 + finalposhl
+        price * dramForYuan +
+          13000 +
+          price * 0.45 +
+          (price * 3) / 100 +
+          finalposhl
       );
     }
   };
