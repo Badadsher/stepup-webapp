@@ -22,17 +22,17 @@
   },
   {
     "id": 4,
-    "name": "Adidas Ozweego",
-    "price": 272,
-    "link": "https://dw4.co/t/A/1qRRtONWs",
-    "image": "https://cdn.poizon.com/pro-img/cut-img/20240328/9e3e51761a4e4ac09a7906c655297c80.jpg?x-oss-process=image/format,webp"
+    "name": "Adidas Originals SUPERSTAR",
+    "price": 449,
+    "link": "https://dw4.co/t/A/1qeRsmjnE",
+    "image": "https://cdn.poizon.com/pro-img/cut-img/20240415/edf6dfa2e7b64c63aafc8d4e0c03b45a.jpg?x-oss-process=image/format,webp"
   },
   {
     "id": 5,
-    "name": "Adidas Ozweego",
-    "price": 272,
-    "link": "https://dw4.co/t/A/1qRRtONWs",
-    "image": "https://cdn.poizon.com/pro-img/cut-img/20240328/9e3e51761a4e4ac09a7906c655297c80.jpg?x-oss-process=image/format,webp"
+    "name": "Adidas Originals SUPERSTAR",
+    "price": 511,
+    "link": "https://dw4.co/t/A/1qeRbB0Xk",
+    "image": "https://cdn.poizon.com/pro-img/cut-img/20230721/a01946688cd9437f94226552ff530803.jpg?x-oss-process=image/format,webp"
   },
   {
     "id": 6,
@@ -148,6 +148,20 @@
   },
   {
     "id": 22,
+    "name": "Adidas Ozweego",
+    "price": 272,
+    "link": "https://dw4.co/t/A/1qRRtONWs",
+    "image": "https://cdn.poizon.com/pro-img/cut-img/20240328/9e3e51761a4e4ac09a7906c655297c80.jpg?x-oss-process=image/format,webp"
+  },
+  {
+    "id": 23,
+    "name": "Adidas Ozweego",
+    "price": 272,
+    "link": "https://dw4.co/t/A/1qRRtONWs",
+    "image": "https://cdn.poizon.com/pro-img/cut-img/20240328/9e3e51761a4e4ac09a7906c655297c80.jpg?x-oss-process=image/format,webp"
+  },
+  {
+    "id": 23,
     "name": "Adidas Ozweego",
     "price": 272,
     "link": "https://dw4.co/t/A/1qRRtONWs",
