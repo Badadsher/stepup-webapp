@@ -12,6 +12,7 @@ import {
   yuanForEur,
   eurForRub,
 } from "../../../Value.js";
+import ScrollToTopButton from "../../UpButton/UpButton.jsx";
 function pumaPage() {
   const priceMaker = (price) => {
     if (price < 1500) {
@@ -112,6 +113,7 @@ function pumaPage() {
           <p>{t("notefound")}</p>
         )}
       </div>
+      <ScrollToTopButton className="upperBtn"></ScrollToTopButton>
     </div>
   );
 }

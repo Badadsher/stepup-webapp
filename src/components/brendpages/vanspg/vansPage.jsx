@@ -12,6 +12,7 @@ import {
   yuanForEur,
   eurForRub,
 } from "../../../Value.js";
+import ScrollToTopButton from "../../UpButton/UpButton.jsx";
 function vansPage() {
   const priceMaker = (price) => {
     if (price < 1500) {
@@ -113,6 +114,7 @@ function vansPage() {
           <p>{t("notefound")}</p>
         )}
       </div>
+      <ScrollToTopButton className="upperBtn"></ScrollToTopButton>
     </div>
   );
 }

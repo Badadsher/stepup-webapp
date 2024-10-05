@@ -43,6 +43,12 @@
   /* max-width: 180px; */
 }
 
+.upperbtn {
+  position: fixed; /* Или use absolute, если нужно привязать к родителю */
+  top: 20px; /* Расстояние от верхней границы */
+  left: 20px; /* Расстояние от левой границы */
+}
+
 .sneaker-cardadi {
   display: flex;
   justify-content: center;

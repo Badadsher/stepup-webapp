@@ -12,6 +12,7 @@ import {
   eurForRub,
 } from "../../../Value.js";
 import { useNavigate } from "react-router-dom";
+import ScrollToTopButton from "../../UpButton/UpButton.jsx";
 function nbPage() {
   const priceMaker = (price) => {
     if (price < 1500) {
@@ -111,6 +112,7 @@ function nbPage() {
           <p>{t("notefound")}</p>
         )}
       </div>
+      <ScrollToTopButton className="upperBtn"></ScrollToTopButton>
     </div>
   );
 }

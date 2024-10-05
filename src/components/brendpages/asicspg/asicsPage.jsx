@@ -12,6 +12,7 @@ import {
   yuanForEur,
   eurForRub,
 } from "../../../Value.js";
+import ScrollToTopButton from "../../UpButton/UpButton.jsx";
 function asicspage() {
   const { t } = useTranslation();
   const [language, setLanguage] = useLocalStorage("language", "arm");
@@ -111,6 +112,7 @@ function asicspage() {
           <p>{t("notefound")}</p>
         )}
       </div>
+      <ScrollToTopButton className="upperBtn"></ScrollToTopButton>
     </div>
   );
 }

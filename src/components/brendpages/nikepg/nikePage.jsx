@@ -12,6 +12,7 @@ import {
   yuanForEur,
   eurForRub,
 } from "../../../Value.js";
+import ScrollToTopButton from "../../UpButton/UpButton.jsx";
 function nikePage() {
   const priceMaker = (price) => {
     if (price < 1500) {
@@ -110,6 +111,7 @@ function nikePage() {
           <p>{t("notefound")}</p>
         )}
       </div>
+      <ScrollToTopButton className="upperBtn"></ScrollToTopButton>
     </div>
   );
 }

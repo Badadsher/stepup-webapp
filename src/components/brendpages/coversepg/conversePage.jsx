@@ -13,6 +13,7 @@ import {
   yuanForEur,
   eurForRub,
 } from "../../../Value.js";
+import ScrollToTopButton from "../../UpButton/UpButton.jsx";
 function conversePage() {
   const priceMaker = (price) => {
     if (price < 1500) {
@@ -113,6 +114,7 @@ function conversePage() {
           <p>{t("notefound")}</p>
         )}
       </div>
+      <ScrollToTopButton className="upperBtn"></ScrollToTopButton>
     </div>
   );
 }
