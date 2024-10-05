@@ -88,10 +88,10 @@ function nikePage() {
       <div className="menu-container">
         {filteredNike.length > 0 ? (
           filteredNike.map((item, index) => (
-            <div key={index} className="sneaker-card">
+            <div key={index} className="sneaker-cardnikecd">
               <div>
                 <img src={item.image} alt={item.name} />
-                <a>
+                <a id="nikecd">
                   {item.name.split("\n").map((part, i) => (
                     <span key={i}>
                       {part}

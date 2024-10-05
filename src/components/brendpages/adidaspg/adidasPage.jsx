@@ -90,10 +90,10 @@ function adidasPage() {
       <div className="menu-container">
         {filteredAdi.length > 0 ? (
           filteredAdi.map((item, index) => (
-            <div key={index} className="sneaker-card">
+            <div key={index} className="sneaker-cardadi">
               <div>
                 <img src={item.image} alt={item.name} />
-                <a>
+                <a id="adidas">
                   {item.name.split("\n").map((part, i) => (
                     <span key={i}>
                       {part}

@@ -26,7 +26,8 @@
 
 .sneaker-cardvans > div > img {
   width: 100%; /* Устанавливает ширину изображения */
-  height: 100%; /* Устанавливает высоту изображения */
+  height: 100%;
+  max-height: 98px;
   object-fit: cover;
   border-radius: 18px;
   /* border: 1px solid #bbb; */
@@ -59,7 +60,7 @@
 }
 
 #namevans {
-  height: 32px;
+  height: 48px;
 }
 
 .sneaker-cardvans > div > button {

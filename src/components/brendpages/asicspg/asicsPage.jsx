@@ -89,10 +89,10 @@ function asicspage() {
       <div className="menu-container">
         {filteredAsics.length > 0 ? (
           filteredAsics.map((item, index) => (
-            <div key={index} className="sneaker-card">
+            <div key={index} className="sneaker-cardasicscd">
               <div>
                 <img src={item.image} alt={item.name} />
-                <a>
+                <a id="asicscd">
                   {item.name.split("\n").map((part, i) => (
                     <span key={i}>
                       {part}

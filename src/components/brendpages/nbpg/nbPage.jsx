@@ -89,10 +89,10 @@ function nbPage() {
       <div className="menu-container">
         {filteredNb.length > 0 ? (
           filteredNb.map((item, index) => (
-            <div key={index} className="sneaker-card">
+            <div key={index} className="sneaker-cardnbcd">
               <div>
                 <img src={item.image} alt={item.name} />
-                <a>
+                <a id="nbcd">
                   {item.name.split("\n").map((part, i) => (
                     <span key={i}>
                       {part}

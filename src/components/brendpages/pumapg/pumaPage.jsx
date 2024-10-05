@@ -90,10 +90,10 @@ function pumaPage() {
       <div className="menu-container">
         {filteredPuma.length > 0 ? (
           filteredPuma.map((item, index) => (
-            <div key={index} className="sneaker-card">
+            <div key={index} className="sneaker-cardpumacd">
               <div>
                 <img src={item.image} alt={item.name} />
-                <a>
+                <a id="pumacd">
                   {item.name.split("\n").map((part, i) => (
                     <span key={i}>
                       {part}
