@@ -13,7 +13,7 @@ import {
   eurForRub,
 } from "../../../Value.js";
 function nikePage() {
-  /* const priceMaker = (price) => {
+  const priceMaker = (price) => {
     if (price < 1500) {
       let y = (price + price * 0.03) * dramForYuan;
       let z = y + y * 0.35 + 13000;
@@ -32,7 +32,6 @@ function nikePage() {
       );
     }
   };
-  */
   const { t } = useTranslation();
   const [language, setLanguage] = useLocalStorage("language", "arm");
   const navigate = useNavigate();
