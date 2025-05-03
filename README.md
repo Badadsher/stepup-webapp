@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# 🛍️ StepUp WebApp — мини-магазин для Telegram Mini Apps 📦
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**StepUp** — это лёгкий и адаптивный мини-магазин, созданный как Telegram Mini App. Пользователи могут выбрать товары и оформить заказ прямо внутри Telegram, а владелец мгновенно получает уведомление через Telegram-бота 🤖📲
 
-## Available Scripts
+![React](https://img.shields.io/badge/React-blue?logo=react)
+![Telegram](https://img.shields.io/badge/Telegram%20MiniApp-Ready-blue?logo=telegram)
+![i18n](https://img.shields.io/badge/i18n-3%20Languages-yellow)
+![Hosted](https://img.shields.io/badge/Hosted%20on-Cloud%20Server-lightgrey)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🌐 Описание
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Мини-магазин открывается по кнопке из Telegram-бота с поддержкой Telegram Web Apps API.  
+Позволяет:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 🛒 выбрать товар  
+- 📝 заполнить контактные данные  
+- 📤 отправить заказ владельцу (через Telegram-бота)
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ✨ Особенности
 
-### `npm run build`
+- 📱 **Поддержка Telegram Web Apps** — открывается внутри Telegram  
+- 🌍 **Поддержка трёх языков** 
+- 🛒 **Интерактивная корзина** — добавление/удаление товаров  
+- 📲 **Telegram-уведомления о заказе** — всё приходит сразу владельцу  
+- ⚡ **Облачный хостинг** — сайт всегда доступен и работает стабильно
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🧩 Используемые технологии
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- ⚛️ [React](https://react.dev/)
+- 🌀 [React i18next](https://react.i18next.com/) — мультиязычность
+- 📦 [Vite](https://vitejs.dev/)
+- 🌐 [Telegram Web Apps API](https://core.telegram.org/bots/webapps)
+- ☁️ Облачный VPS 
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🖼️ Интерфейс
+![Скриншот 1](Screenshots/stable.png)
+![Скриншот 1](Screenshots/screen1.png)
+![Скриншот 1](Screenshots/screen3.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+# 1. Клонируй репозиторий
+git clone https://github.com/Badadsher/stepup-webapp.git
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# 2. Перейди в папку
+cd stepup-webapp
 
-## Learn More
+# 3. Установи зависимости
+npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# 4. Запусти приложение
+npm run dev
