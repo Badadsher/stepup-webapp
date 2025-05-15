@@ -58,9 +58,7 @@ function adidasPage() {
       let message = "Ձեր պատվերն ընդունված է";
       window.Telegram.WebApp.showAlert(message);
     }
-    // Отправка данных на сервер
     fetch("https://stepupback.ru/web-data", {
-      // mode: "no-cors",
       method: "POST",
       headers: {
         "Content-Type": "application/json",
