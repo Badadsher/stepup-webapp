@@ -5,6 +5,7 @@
 ![React](https://img.shields.io/badge/React-blue?logo=react)
 ![Telegram](https://img.shields.io/badge/Telegram%20MiniApp-Ready-blue?logo=telegram)
 ![i18n](https://img.shields.io/badge/i18n-3%20Languages-yellow)
+![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?logo=docker&logoColor=white)
 ![Hosted](https://img.shields.io/badge/Hosted%20on-Cloud%20Server-lightgrey)
 
 ---
